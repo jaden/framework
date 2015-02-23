@@ -39,7 +39,7 @@ class KeyGenerateCommand extends Command {
 		if ( ! file_exists($path))
 		{
 			$this->error("A .env file needs to be created first.");
-			exit(1);
+			return 1;
 		}
 
 		file_put_contents($path, str_replace(
